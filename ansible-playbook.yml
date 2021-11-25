@@ -1,0 +1,21 @@
+---
+- hosts: Web
+  become: yes
+  tasks: 
+
+
+-name: Install httpd 
+yum:
+ name: httpd 
+state: present
+
+-name: Start httpd
+yum: 
+  name: httpd
+  state: started
+  enabled: yes
+
+
+---
+
+
